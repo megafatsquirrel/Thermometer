@@ -156,6 +156,7 @@ export default {
     },
     setupTempAlert: function(alertTemp, alertOnIncrease, alertOnDecrease, alertRepeat) {
       this.tempAlertInterval = setInterval(() => {
+          this.updateValues();
           this.tempReadingMessage = 'Checking temp for: ' + alertTemp + '' + this.currentScale + '. Current Temp is: ' + 
             this.currentTemperature + '. Previous Temp: ' + this.previousTemp;
 
@@ -171,7 +172,6 @@ export default {
             this.alertOnThreshold(alertRepeat);  
           }
           this.previousTemp = this.currentTemperature;
-          this.updateValues();
       }, this.tempInterval);
     },
     alertOnThreshold: function(alertRepeat) {
