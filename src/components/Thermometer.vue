@@ -9,7 +9,7 @@
     <form v-on:submit.prevent>
       <button class="basic-style btn" v-on:click="getLocationTemp">Local temperture</button>
       <input class="basic-style temp-input" placeholder="Enter Temp" v-model.number="form.inputTemp"/>
-      <select class="basic-style" v-model="form.inputScale">
+      <select class="basic-style scale-select" v-model="form.inputScale">
         <option value='F'>Fahrenheit</option>
         <option value='C'>Celisus</option>
         <option value='K'>Kelvin</option>
@@ -225,6 +225,10 @@ export default {
 
   .temp-input {
     width: 20%;
+  }
+
+  .scale-select {
+    background-color: #fff;
   }
 
   .alert-input-container {

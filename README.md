@@ -1,4 +1,6 @@
-# thermometer
+# Thermometer
+
+https://tea.now.sh/
 
 ## Project setup
 ```
